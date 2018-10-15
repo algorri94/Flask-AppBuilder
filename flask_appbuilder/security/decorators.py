@@ -1,7 +1,7 @@
 import logging
 import functools
 
-from flask import flash, redirect, url_for, make_response, jsonify
+from flask import flash, redirect, url_for, make_response, jsonify, request
 from .._compat import as_unicode
 from ..const import LOGMSG_ERR_SEC_ACCESS_DENIED, FLAMSG_ERR_SEC_ACCESS_DENIED, PERMISSION_PREFIX
 
