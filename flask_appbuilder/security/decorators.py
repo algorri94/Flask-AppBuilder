@@ -27,7 +27,6 @@ def has_access(f):
         else:
             log.warning(LOGMSG_ERR_SEC_ACCESS_DENIED.format(permission_str, self.__class__.__name__))
             flash(as_unicode(FLAMSG_ERR_SEC_ACCESS_DENIED), "danger")
-        log.info(request.url)
         return redirect(url_for(self.appbuilder.sm.auth_view.__class__.__name__ + ".login", next=request.url))
     f._permission_name = permission_str
     return functools.update_wrapper(wraps, f)
